@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{city}}</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/public/css/weather.css">
+    <link rel="stylesheet" href="/public/css/normalize.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=2339c85f-e882-47dd-867a-cc40130bb507&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <div class="weather">
+        {{#if show_weather}}
+            <div class="weather__info">
+                <img src="{{icon}}" alt="icon" class="weather__icon">
+                <p>Населенный пункт: {{city}}</p>
+                <p>Мин.: {{min_temp}}<sup>o</sup></p>
+                <p>Макс.: {{max_temp}}<sup>o</sup></p>
+                <p>Скорость ветра: {{wind_speed}} м/с</p>
+            </div>
+            <div class="weather__map" id="map">
+
+            </div>
+        {{/if}}
+    </div>
+    <script type="text/javascript">
+            ymaps.ready(init);
+            function init(){
+                var myMap = new ymaps.Map("map", {
+                    center: [{{lat}}, {{lon}}],
+                    zoom: 12
+                });
+            }
+    </script>
+</body>
+<html>

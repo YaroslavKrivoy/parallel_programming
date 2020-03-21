@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/normalize.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+    	<nav class="nav">
+    		
+    	</nav>
+    </header>
+    <section class="main">
+    	<form class="form">
+    		<div class="form__select">
+    			<label for="country">Страна</label>
+    			<select id="country" class="country">
+    				{{#each countries}}
+                		<option value="{{this.id}}">{{this.name}}</option>
+            		{{/each}}
+    			</select>
+    		</div>
+    		<div class="form__select">
+    			<label for="area">Регион/штат</label>
+    			<select id="area" class="area"></select>
+    		</div>
+    		<div class="form__select">
+    			<label for="district">Район</label>
+    			<select id="district" class="district"></select>
+    		</div>
+    		<div class="form__select">
+    			<label for="city">Населенный пункт</label>
+    			<select id="city" class="city"></select>
+    		</div>
+    		<input type="submit" value="Отобразить прогноз" class="form__button">
+    	</form>
+    </section>
+    <footer class="footer">
+    	
+    </footer>
+    <script src="/public/js/ajax.js"></script>
+</body>
+<html>

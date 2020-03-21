@@ -1,0 +1,28 @@
+.weather{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.weather__info, .weather__map{
+    height: 400px;
+    padding: 20px 20px 20px 20px;
+}
+
+.weather__info{
+    width: 30%;
+}
+
+.weather__map{
+    width: 70%;
+}
+
+.weather__icon{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
